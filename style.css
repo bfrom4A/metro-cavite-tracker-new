@@ -1,0 +1,41 @@
+/* Reset */
+body, html { margin: 0; padding: 0; font-family: 'ui-monospace', 'SFMono-Regular', monospace; }
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar { width: 4px; }
+.custom-scrollbar::-webkit-scrollbar-track { background: #0f172a; }
+.custom-scrollbar::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 2px; }
+
+/* Map */
+#map { height: 100vh; width: 100%; z-index: 0; background: #0f172a; }
+.leaflet-container { background: #0f172a; }
+
+/* Glass Panel */
+.glass-panel {
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+
+/* Markers */
+.bus-icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.overspeeding-marker {
+    animation: flashRed 0.5s infinite;
+    filter: drop-shadow(0 0 10px #ef4444);
+}
+@keyframes flashRed {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+/* Popup */
+.leaflet-popup-content-wrapper {
+    background: rgba(15, 23, 42, 0.95);
+    color: white;
+    border: 1px solid #334155;
+}
+.leaflet-popup-tip { background: rgba(15, 23, 42, 0.95); border: 1px solid #334155; }
